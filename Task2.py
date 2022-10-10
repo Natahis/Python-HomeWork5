@@ -21,9 +21,8 @@ if x:
 else:
     print(f"Первый ходит {player2}")
 
-sweets = 2021
-count1 = 0 
-count2 = 0
+sweets = 221
+count = 0 
 
 def step(name):
     x = int(input(f'{name}, возьмите конфеты от 1 до 28: '))
@@ -31,21 +30,16 @@ def step(name):
         x = int(input(f'{name}, введите корректное количество конфет: '))
     return x
 
-# def p_print(name, k, count, sweets):
-#     print(f"Ходил {name}, он взял {k}, теперь у него {count}. Осталось {sweets} конфет.")
-
-
-
 while sweets > 28:
     if x:
         k = step(player1)
-        count1 += k
+        count += k
         sweets -= k
         x = False
         print(f'Осталось {sweets} конфет')
     else:
         k = step(player2)
-        count2 += k
+        count += k
         sweets -= k
         x = True
         print(f'Осталось {sweets} конфет.')
